@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Images Example</title>
+    <style>
+        /* Tambahkan beberapa gaya untuk mengatur jarak dan ukuran gambar */
+        .content {
+            height: 1000px; /* Tinggi yang besar untuk membuat halaman panjang */
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lazy Loading Images Example</h1>
+
+    <!-- Konten tambahan di atas gambar -->
+    <div class="content">
+        <p>Scroll down to see the images load...</p>
+        <p>This space is here to simulate a longer webpage so that the lazy loading effect is more noticeable. Keep scrolling down to see the images appear as you reach them.</p>
+        <!-- Tambahkan lebih banyak paragraf jika perlu -->
+    </div>
+    
+    <!-- Gambar dengan lazy loading -->
+    <img data-src="large-image1.jpg" alt="Image 1" class="lazyload" width="600" height="400">
+    <img data-src="large-image2.jpg" alt="Image 2" class="lazyload" width="600" height="400">
+    <img data-src="large-image3.jpg" alt="Image 3" class="lazyload" width="600" height="400">
+    
+    <!-- Gambar tanpa lazy loading untuk perbandingan -->
+    <img src="large-image4.jpg" alt="Image 4" width="600" height="400">
+
+    <!-- Konten tambahan di bawah gambar -->
+    <div class="content">
+        <p>More content after the images...</p>
+        <p>These paragraphs are just here to demonstrate that the page is longer and requires scrolling. The images above should have loaded only when you scrolled to them.</p>
+    </div>
+
+    <script src="lazyload.js"></script>
+</body>
+</html>
